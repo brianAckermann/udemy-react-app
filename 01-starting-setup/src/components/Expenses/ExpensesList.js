@@ -9,6 +9,7 @@ const ExpensesList = props => {
 
   return (
     props.expenses.map((exp) => { 
+      console.log("non-unique key check:", exp.id, exp.title);
       return (
           <ul className="expenses-list" >
             <ExpenseItem
