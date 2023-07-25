@@ -31,16 +31,8 @@ function App() {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    //console.log("adding new expense data from form submit", expense);
-    //console.log("prevExpenses", prevExpenses);
-    setExpenses((prevExpenses) => {
-      //return [expense, ...prevExpenses];
-
-      var newExpenses = [...prevExpenses];
-      console.log("newExpenses before", newExpenses);
-      newExpenses.push(expense);
-      console.log("newExpenses after", newExpenses);
-      return newExpenses;
+      setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
     });
   };
 
